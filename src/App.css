@@ -1,0 +1,123 @@
+body{
+    margin : 0px;
+    padding : 0px;
+}
+
+#root{
+   width : 100vw;
+   height : 100vh;
+   opacity : 0.8;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+.plain{
+   background-image: url('../public/Images/normalFinal.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 100vh;
+}
+
+.cold{
+   
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../public/Images/cold-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%  100vh;
+     
+}
+
+
+
+.hot{
+   
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../public/Images/warm-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 100vh;
+  
+}
+
+.app{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    padding : 20px;
+}
+
+
+.form{
+    width: 50vw;
+    margin : auto;
+    display: flex;
+    justify-content: center;
+}
+
+#input{
+    width : 70%;
+    padding : 6px;
+    margin-right : 5px;
+    border-radius: 5px;
+    border: 3px solid rgb(0, 0, 0);
+    opacity: 0.7;
+    font-size: larger;
+}
+ 
+#input:focus-within{
+    opacity: 1;
+    outline: none;
+}
+
+button{
+   
+    padding : 6px;
+    border-radius: 5px;
+    font-size: larger;
+    opacity: 1;
+    border: 3px solid black;
+    cursor : pointer;
+    transition: transform 0.1s ease-in;
+}
+
+button:hover{
+   transform: scale(1.05);
+}
+
+#info{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+#info p{
+    margin: 10px;
+    color: rgb(230, 225, 225);
+    text-align: center;
+    font-size: clamp(20px , 2.5vw , 35px);
+    font-weight: 500;
+}
+
+#temp{
+   
+    border-radius: 8%;
+    background-color: black;
+    opacity: 0.4;
+    padding : 15px;
+    margin: 5px;
+    font-size: xx-large;
+    color: white;
+
+}
+
+
+@media(max-width : 600px){
+    .form{
+        width: 80vw;
+    }
+}
