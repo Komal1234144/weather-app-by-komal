@@ -1,4 +1,4 @@
-import React, { useState , useReducer} from 'react';
+import React, {  useReducer} from 'react';
 import moment from 'moment';
 import './App.css'
 const App = () =>{
@@ -29,7 +29,7 @@ const App = () =>{
          return state;
      }
   }
- let time = moment().format('dddd, MMMM Do YYYY')
+ let time = moment().format('dddd, MMMM Do, YYYY')
 //  let [temp , setTemp] = useState('')
 //  let [currDate , setCurrDate] = useState(time)
 //  let [place , setPlace] = useState();
@@ -93,8 +93,8 @@ const App = () =>{
      dispatch({ type : ACTIONS.SET_TEMP , payload : { temp : temp}})
      let desc ;
      temp === 0 ? desc = 'Freeze' :
-     temp <= 20 && temp >=-100? desc = 'Freeze':
-     temp>=20 && temp<=25 ? desc = 'Cold':
+     temp <= 12 && temp >=-100? desc = 'Freeze':
+     temp>=12 && temp<=25 ? desc = 'Cold':
      temp>=25 && temp<=28 ? desc = 'Normal' :
      temp >= 28 && temp <=30 ? desc = 'Normal' : 
      temp>=30 && temp<= 33 ? desc = 'Warm' :
@@ -110,10 +110,10 @@ const App = () =>{
     
     const root = document.getElementById('root');
     
-    desc==='Freeze' ? root.className = 'cold' :
+    desc==='Freeze' ? root.className = 'freeze' :
     desc==='Cold' ? root.className = 'cold' :
-    desc === 'Normal' ? root.className = 'hot' :
-    desc === 'Warm' ? root.className = 'hot' :
+    desc === 'Normal' ? root.className = 'normal' :
+    desc === 'Warm' ? root.className = 'warm' :
     desc === 'Hot' ? root.className = 'hot' : 
     root.className = 'plain'   
    
@@ -137,7 +137,7 @@ const App = () =>{
     </form>   
         <div id='info'>
            {state.error && state.error } 
-           <p>{state.currDate}</p>
+           <p id='date'>{state.currDate}</p>
            <p>{state.place}</p> 
             {state.temp && <div id='temp'>{state.temp}°C</div> }
             <p>{state.desc}</p>

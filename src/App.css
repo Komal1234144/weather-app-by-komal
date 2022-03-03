@@ -20,22 +20,34 @@ body{
    background-size: 100% 100vh;
 }
 
-.cold{
-   
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../public/Images/cold-bg.jpg');
+.cold{  
+   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('../public/Images/cold-bg.jpg');
    background-repeat: no-repeat;
-   background-size: 100%  100vh;
-     
+   background-size: 100%  100vh;    
 }
 
+.freeze{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('https://i.ibb.co/G2rD1YH/freeze-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
 
+.normal{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('../public/Images/normal-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%  100vh;  
+}
 
-.hot{
-   
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../public/Images/warm-bg.jpg');
+.warm{
+   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('../public/Images/warm-bg.jpg');
    background-repeat: no-repeat;
    background-size: 100% 100vh;
-  
+}
+
+.hot{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('../public/Images/hot-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .app{
@@ -60,23 +72,27 @@ body{
     padding : 6px;
     margin-right : 5px;
     border-radius: 5px;
-    border: 3px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 6px 1px rgba(66,55,55,0.75);
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(66,55,55,0.75);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(66,55,55,0.75);
     opacity: 0.7;
-    font-size: larger;
+    height : clamp(20px , 2vw , 30px);
+    font-size:  clamp(15px , 1.5vw , 25px);
 }
  
-#input:focus-within{
+#input:focus{
     opacity: 1;
     outline: none;
 }
 
-button{
-   
+button{ 
     padding : 6px;
     border-radius: 5px;
-    font-size: larger;
+    font-size:  clamp(15px , 1.5vw , 25px);
+    height : clamp(35px , 3vw , 45px);
     opacity: 1;
-    border: 3px solid black;
+    border: 1px solid black;
     cursor : pointer;
     transition: transform 0.1s ease-in;
 }
@@ -86,22 +102,32 @@ button:hover{
 }
 
 #info{
-    font-family: cursive;
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
     font-size: 25px;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
+    width : 60vw;
 }
 
-#info p{
+#date{
+    font-size: clamp(15px , 1.5vw , 25px);
+    font-style: oblique;
+    color : rgb(223, 205, 215);
+    letter-spacing: 1px;
+  }
+
+ p{
     margin: 10px;
     color: rgb(230, 225, 225);
     text-align: center;
-    font-size: clamp(20px , 2.5vw , 35px);
-    font-weight: 500;
+    font-size: clamp(18px , 2.2vw , 30px);
+    font-weight: bold;
+    
 }
+
 
 #temp{
    
@@ -120,4 +146,9 @@ button:hover{
     .form{
         width: 80vw;
     }
+
+    #info{
+        width : 90vw;
+    }
+
 }
