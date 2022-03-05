@@ -4,7 +4,7 @@ A weather app where you can get the current temperature of any valid location yo
 
 <h1>Installation</h1>
   
-    Run 'npm' to install dpendencies 
+    Run 'npm install' to install dpendencies 
     
     Run 'npm start' to start the website
   
